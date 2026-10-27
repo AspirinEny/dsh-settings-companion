@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Settings Companion",
+    "description": "Adds a gear + Settings column beside the sidebar account row; clicking it opens Settings."
+  }
+}

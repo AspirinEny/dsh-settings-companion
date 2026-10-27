@@ -1,0 +1,59 @@
+{
+  "name": "dsh-settings-companion",
+  "version": "0.2.0",
+  "description": "Adds a gear + Settings column beside the DSH desktop sidebar account row.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "locale/en.json",
+    "locale/zh.json",
+    "icon.svg"
+  ],
+  "scripts": {
+    "verify": "node scripts/verify.mjs",
+    "pack": "node scripts/pack.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "sidebar",
+    "settings"
+  ],
+  "author": "Aspir",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AspirinEny/dsh-settings-companion.git"
+  },
+  "homepage": "https://github.com/AspirinEny/dsh-settings-companion#readme",
+  "bugs": {
+    "url": "https://github.com/AspirinEny/dsh-settings-companion/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    },
+    "manifestVersion": 1
+  }
+}

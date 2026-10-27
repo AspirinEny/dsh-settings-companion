@@ -1,0 +1,6 @@
+# Keep every text file byte-identical across platforms.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.webp binary
