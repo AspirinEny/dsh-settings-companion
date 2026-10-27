@@ -2,6 +2,12 @@
 
 本项目的所有重要变更都记录在此文件。格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本号遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/)。
 
+## [0.2.1] - 2026-10-27
+
+### Changed
+
+- 文档：安装说明新增「贴 Release tarball 链接」，并解释直接粘仓库地址会走 git 依赖、没装 git 时报 `ERR_PNPM_GIT_RESOLVE_FAILED`。
+- 发版产物额外提供一个不带版本号的文件名，`releases/latest/download/dsh-settings-companion.tgz` 可长期复用。
 ## [0.2.0] - 2026-10-27
 
 ### Added

@@ -46,7 +46,23 @@
 node scripts/pack.mjs   # 产出 dist/dsh-settings-companion-<version>.tgz
 ```
 
-### 方式 C：从源码链接（开发）
+### 方式 C：贴 Release 的 tarball 链接（本机没装 git 时唯一能联网装的方式）
+
+```text
+https://github.com/AspirinEny/dsh-settings-companion/releases/latest/download/dsh-settings-companion.tgz
+```
+
+把它粘进「从本地安装 / 安装插件」的输入框即可：pnpm 会当成远程 tarball 直接下载，**不需要 git**。这个链接永远指向最新版本；想锁定版本就换成 `…/releases/download/v0.2.1/dsh-settings-companion-0.2.1.tgz`。
+
+> **别直接粘仓库地址**（`https://github.com/<user>/dsh-settings-companion`）。pnpm 会把它解析成 **git 依赖**并调用 `git ls-remote`，没装 git 的机器会报：
+>
+> ```text
+> [ERR_PNPM_GIT_RESOLVE_FAILED] Failed to resolve git dependency "https://github.com/…": git ls-remote failed: 'git' 不是内部或外部命令…
+> ```
+>
+> 这不是插件或仓库的问题——装个 [Git for Windows](https://git-scm.com/download/win) 后同一地址就能用（走 clone，能拿到最新代码而不是某个 tag）。
+
+### 方式 D：从源码链接（开发）
 
 ```powershell
 & "$env:LOCALAPPDATA\Programs\DeepSeek Harness\resources\runtime\cli\bin\dsh.cmd" `

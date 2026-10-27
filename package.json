@@ -1,6 +1,6 @@
 {
   "name": "dsh-settings-companion",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Adds a gear + Settings column beside the DSH desktop sidebar account row.",
   "type": "module",
   "main": "lib/index.js",
